@@ -216,12 +216,12 @@ func isUbuntuLike(id, idLike string) bool {
 }
 
 func isArchLike(id, idLike string) bool {
-	if id == LinuxDistroArch {
+	if id == LinuxDistroArch || id == "artix" || id == "cachyos" || id == "endeavour" || id == "garuda" || id == "manjaro" || id == "omarchy" {
 		return true
 	}
 
 	for _, token := range strings.Fields(idLike) {
-		if token == LinuxDistroArch {
+		if token == LinuxDistroArch || token == "artix" || token == "cachyos" || token == "endeavour" || token == "garuda" || token == "manjaro" || token == "omarchy" {
 			return true
 		}
 	}
